@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <StoreButton target='_blank' href="https://play.google.com/store/apps/details?id=br.com.youdigital.smartimobiliario"><FontAwesomeIcon icon={faGooglePlay} /> Play Store</StoreButton>
         <StoreButton target='_blank' href="https://apps.apple.com/br/app/smart-imobiliario/id1128234098"><FontAwesomeIcon icon={faApple} /> Apple Store</StoreButton>
         <NavButton href="/gratuito">Plano Grátis</NavButton>
-        <NavButton target='_blank' href="https://app.reaisystems.com.br/">Login</NavButton>
+        <NavButton target='_blank' href="https://login-reaisystems.vercel.app/">Login</NavButton>
       </MenuContainer>
     </StyledNavbar>
   );
