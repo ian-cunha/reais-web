@@ -9,11 +9,11 @@ const Plans: React.FC = () => {
   const planListRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
-    planListRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
+    planListRef.current?.scrollBy({ left: -750, behavior: 'smooth' });
   };
 
   const scrollRight = () => {
-    planListRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
+    planListRef.current?.scrollBy({ left: 750, behavior: 'smooth' });
   };
 
   const plans = [
