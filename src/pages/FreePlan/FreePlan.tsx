@@ -36,7 +36,7 @@ const FreePlan: React.FC = () => {
 
       <Buttons>
         <Button label="Saber mais" onClick={about} />
-        <Button label="Assine já" onClick={sign} />
+        <Button label="✓ Assinar" onClick={sign} />
       </Buttons>
 
       <PlansDetails />

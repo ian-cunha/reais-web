@@ -8,6 +8,7 @@ export const StyledNavbar = styled.nav`
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 5;
 `;
 
 export const LogoContainer = styled.div`
