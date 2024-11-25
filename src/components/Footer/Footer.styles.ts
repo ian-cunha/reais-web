@@ -29,3 +29,15 @@ export const SubTitle = styled.p`
     font-size: 0.5em;
   }
 `;
+
+export const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 14px;
+  justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
