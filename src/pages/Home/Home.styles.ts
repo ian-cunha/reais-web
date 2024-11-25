@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   margin: 0;
   background-color: black;
 `;
@@ -18,6 +18,8 @@ export const Content = styled.div`
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
+  padding-top: 150px;
+  padding-bottom: 100px;
 
   @media (max-width: 768px) {
     flex-direction: column;

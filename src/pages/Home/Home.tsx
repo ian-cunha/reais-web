@@ -5,6 +5,10 @@ import ai from '../../assets/ai.svg';
 import { useNavigate } from 'react-router-dom';
 import PopupForm from '../../components/PopupForm/PopupForm';
 import whiteLogo from '../../assets/White.svg';
+import AppSection from './AppSection/AppSection';
+import IntegrationSection from './IntegrationSection/IntegrationSection';
+import WebsiteSection from './WebsiteSection/WebsiteSection';
+import MigrationSection from './MigrationSection/MigrationSection';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -36,6 +40,12 @@ const Home: React.FC = () => {
       </Content>
 
       {isPopupOpen && <PopupForm onClose={togglePopup} planId={''} />}
+
+      <SubTitle>CONSTRUINDO ABAIXO: </SubTitle>
+      <AppSection />
+      <IntegrationSection />
+      <MigrationSection />
+      <WebsiteSection />
     </Container>
   );
 };
