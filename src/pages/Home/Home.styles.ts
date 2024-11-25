@@ -22,6 +22,7 @@ export const Content = styled.div`
   padding-bottom: 100px;
 
   @media (max-width: 768px) {
+    padding-top: 100px;
     flex-direction: column;
     align-items: center;
   }
