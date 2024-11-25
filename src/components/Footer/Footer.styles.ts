@@ -24,6 +24,7 @@ export const Title = styled.h4`
 export const SubTitle = styled.p`
   color: white;
   font-weight: 300;
+  font-size: 0.8em;
 
   @media (max-width: 768px) {
     font-size: 0.5em;
