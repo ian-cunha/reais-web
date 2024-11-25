@@ -34,7 +34,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ onClose, planId }) => {
             id_detalhe_outra_origem: 820,
             tipo_de_interesse: 0,
             idAcao: 0,
-            mensagem: "Quero ter mais informações.",
+            mensagem: "Olá, Fui redirecionado do RE.AI.s e quero mais informações!",
         };
 
         try {
@@ -42,11 +42,11 @@ const PopupForm: React.FC<PopupFormProps> = ({ onClose, planId }) => {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
-            alert('Dados enviados com sucesso! Você será redirecionado.');
+            alert('Dados enviados com sucesso! Você será redirecionado após clicar em OK.');
             onClose();
 
             const whatsappLink = `https://wa.me/5581973382868?text=${encodeURIComponent(
-                'Olá, quero saber mais sobre os planos!'
+                'Olá, Fui redirecionado do RE.AI.s e quero mais informações!'
             )}`;
             window.open(whatsappLink, '_blank');
         } catch (error) {

@@ -30,11 +30,25 @@ export const Title = styled.h1`
   font-size: 3em;
   text-align: left;
   margin: 0;
+  margin-bottom: -25px;
 
   @media (max-width: 768px) {
     text-align: left;
-    font-size: 2.5em;
-    margin-top: 30px;
+    font-size: 2em;
+    margin-bottom: -20px;
+    text-align: center;
+  }
+`;
+
+export const BigTitle = styled.h2`
+  color: white;
+  font-size: 6em;
+  text-align: left;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 5em;
     margin-bottom: 20px;
   }
 `;
@@ -49,6 +63,7 @@ export const SubTitle = styled.h3`
 export const Paragraph = styled.p`
   color: white;
   margin: 0;
+  font-size: 0.8em;
   margin-bottom: 20px;
 `;
 
