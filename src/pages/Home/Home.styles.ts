@@ -35,21 +35,25 @@ export const Title = styled.h1`
   @media (max-width: 768px) {
     text-align: left;
     font-size: 2em;
-    margin-bottom: -20px;
     text-align: center;
   }
 `;
 
-export const BigTitle = styled.h2`
-  color: white;
-  font-size: 6em;
-  text-align: left;
+export const BigTitle = styled.div`
   margin: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  img {
+    height: 100px;
+  }
 
   @media (max-width: 768px) {
-    text-align: center;
-    font-size: 5em;
-    margin-bottom: 20px;
+  align-items: center;
+    img {
+    height: 80px;
+  }
   }
 `;
 

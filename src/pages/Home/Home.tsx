@@ -4,6 +4,7 @@ import { Buttons, Container, Paragraph, SubTitle, Title, Content, Image, BigTitl
 import ai from '../../assets/ai.svg';
 import { useNavigate } from 'react-router-dom';
 import PopupForm from '../../components/PopupForm/PopupForm';
+import whiteLogo from '../../assets/White.svg';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Home: React.FC = () => {
       <Content>
         <div>
           <Title>SMART AGORA É </Title>
-          <BigTitle>RE.AI.s</BigTitle>
+          <BigTitle><img src={whiteLogo} alt="Logo RE.AI.s" /></BigTitle>
           <SubTitle>Sistema imobiliário completo com site de imóveis</SubTitle>
           <Paragraph>Criado para ajudar você a priorizar negócios, acompanhar seu desempenho e não perder oportunidades.</Paragraph>
           <Buttons>
