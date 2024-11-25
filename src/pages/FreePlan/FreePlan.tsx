@@ -1,22 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Container, Title, SubTitle, Buttons, Icons, Icon, ButtonDetails } from './FreePlan.styles';
 import Button from '../../components/Button/Button';
 import PlansDetails from '../../components/PlansDetails/PlansDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faCircleUser, faGlobe, faTableList } from '@fortawesome/free-solid-svg-icons';
+import PopupForm from '../../components/PopupForm/PopupForm';
 
 const FreePlan: React.FC = () => {
-
   const plansDetailsRef = useRef<HTMLDivElement>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const scrollToPlansDetails = () => {
     plansDetailsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const about = () => {
-    alert('Saber mais');
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
   };
 
-  const sign = () => {
+  const Sign = () => {
     window.open('https://app.reaisystems.com.br/SmartImobiliario-Corretor');
   };
 
@@ -42,13 +44,14 @@ const FreePlan: React.FC = () => {
       <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
 
       <Buttons>
-        <Button label="Saber mais" onClick={about} />
-        <Button label="✓ Assinar" onClick={sign} />
+        <Button label="Saber mais" onClick={togglePopup} />
+        <Button label="✓ Assinar" onClick={Sign} />
       </Buttons>
 
-      <div ref={plansDetailsRef}>
-        <PlansDetails />
-      </div>
+      <div ref={plansDetailsRef} />
+      <PlansDetails />
+
+      {isPopupOpen && <PopupForm onClose={togglePopup} />}
     </Container>
   );
 };

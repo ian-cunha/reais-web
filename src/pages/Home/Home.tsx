@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    alert('Botão clicado!');
+  const About = () => {
+    window.open('https://wa.me/5581973382868?text=Quero%20saber%20mais%20sobre%20o%20plano%20gr%C3%A1tis!', '_blank');
   };
 
   const FreePlan = () => {
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           <SubTitle>Criado para ajudar você a priorizar negócios, acompanhar seu desempenho e não perder oportunidades.</SubTitle>
           <Paragraph>AUMENTE JÁ SUAS VENDAS!</Paragraph>
           <Buttons>
-            <Button label="Fale com um consultor" onClick={handleClick} />
+            <Button label="Fale com um consultor" onClick={About} />
             <Button label="Plano Gratuito" onClick={FreePlan} />
           </Buttons>
         </div>

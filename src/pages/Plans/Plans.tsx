@@ -40,6 +40,7 @@ const Plans: React.FC = () => {
         'Treinamentos das equipes de vendas e gerentes',
         'Parametrização e configuração da conta',
       ],
+      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=2',
     },
     {
       name: 'Micro',
@@ -58,6 +59,7 @@ const Plans: React.FC = () => {
         'Treinamentos das equipes de vendas e gerentes',
         'Parametrização e configuração da conta',
       ],
+      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=3',
     },
     {
       name: 'Pequeno',
@@ -76,6 +78,7 @@ const Plans: React.FC = () => {
         'Treinamentos das equipes de vendas e gerentes',
         'Parametrização e configuração da conta',
       ],
+      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=5',
     },
     {
       name: 'Médio',
@@ -94,6 +97,7 @@ const Plans: React.FC = () => {
         'Treinamentos das equipes de vendas e gerentes',
         'Parametrização e configuração da conta',
       ],
+      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=10',
     },
     {
       name: 'Grande',
@@ -112,6 +116,7 @@ const Plans: React.FC = () => {
         'Treinamentos das equipes de vendas e gerentes',
         'Parametrização e configuração da conta',
       ],
+      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=20',
     },
     {
       name: 'Gratuito',
@@ -125,6 +130,7 @@ const Plans: React.FC = () => {
         'Cadastro de Clientes',
         'Site Personalizado',
       ],
+      sign: 'https://app.reaisystems.com.br/SmartImobiliario-Corretor',
     },
   ];
 
@@ -132,8 +138,8 @@ const Plans: React.FC = () => {
     setBillingCycle(cycle);
   };
 
-  const More = () => {
-    alert('Botão clicado!');
+  const About = () => {
+    window.open('https://wa.me/5581973382868?text=Quero%20saber%20mais%20sobre%20os%20planos.', '_blank');
   };
 
   return (
@@ -164,8 +170,8 @@ const Plans: React.FC = () => {
                 <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
               </DivBtnDetails>
               <Buttons>
-                <Button label="Saber mais" onClick={More} />
-                <Button label="✓ Assinar" onClick={More} />
+                <Button label="Saber mais" onClick={About} />
+                <Button label="✓ Assinar" onClick={() => window.open(plan.sign, '_blank')} />
               </Buttons>
             </PlanCard>
           ))}
@@ -173,9 +179,8 @@ const Plans: React.FC = () => {
         <ArrowButton onClick={scrollRight}>{'>'}</ArrowButton>
       </PlanListWrapper>
 
-      <div ref={plansDetailsRef}>
-        <PlansDetails />
-      </div>
+      <div ref={plansDetailsRef} />
+      <PlansDetails />
     </Container>
   );
 };
