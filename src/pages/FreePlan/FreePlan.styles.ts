@@ -66,3 +66,22 @@ export const Icon = styled.h3`
   font-weight: 100;
   padding: 20px;
 `;
+
+export const ButtonDetails = styled.a`
+  color: #e36108;
+  border-radius: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  text-align: center;
+  font-weight: 600;
+
+  &:hover {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;

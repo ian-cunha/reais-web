@@ -1,9 +1,15 @@
 import React, { useRef, useState } from 'react';
-import { Buttons, Container, PlanListWrapper, PlanList, PlanCard, PlanTitle, PlanPrice, PlanFeatures, SubTitle, Title, ArrowButton } from './Plans.styles';
+import { Buttons, Container, PlanListWrapper, PlanList, PlanCard, PlanTitle, PlanPrice, PlanFeatures, SubTitle, Title, ArrowButton, ButtonDetails, DivBtnDetails } from './Plans.styles';
 import Button from '../../components/Button/Button';
 import PlansDetails from '../../components/PlansDetails/PlansDetails';
 
 const Plans: React.FC = () => {
+
+  const plansDetailsRef = useRef<HTMLDivElement>(null);
+  const scrollToPlansDetails = () => {
+    plansDetailsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const [billingCycle, setBillingCycle] = useState<'mensal' | 'anual'>('mensal');
 
   const planListRef = useRef<HTMLDivElement>(null);
@@ -110,7 +116,8 @@ const Plans: React.FC = () => {
     {
       name: 'Gratuito',
       description: 'Para quem deseja começar a organizar seu site, cadastro, imóveis e clientes.',
-      price: 'Grátis/mês',
+      mensal: 'R$0/mês',
+      anual: 'R$0/mês',
       implementation: 'Consulte Implantação',
       features: [
         '1 usuário',
@@ -153,6 +160,9 @@ const Plans: React.FC = () => {
                   <li key={idx}>{feature}</li>
                 ))}
               </PlanFeatures>
+              <DivBtnDetails>
+                <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
+              </DivBtnDetails>
               <Buttons>
                 <Button label="Saber mais" onClick={More} />
                 <Button label="✓ Assinar" onClick={More} />
@@ -163,8 +173,9 @@ const Plans: React.FC = () => {
         <ArrowButton onClick={scrollRight}>{'>'}</ArrowButton>
       </PlanListWrapper>
 
-      {/* Detalhes dos Planos */}
-      <PlansDetails />
+      <div ref={plansDetailsRef}>
+        <PlansDetails />
+      </div>
     </Container>
   );
 };

@@ -1,11 +1,17 @@
-import React from 'react';
-import { Container, Title, SubTitle, Buttons, Icons, Icon } from './FreePlan.styles';
+import React, { useRef } from 'react';
+import { Container, Title, SubTitle, Buttons, Icons, Icon, ButtonDetails } from './FreePlan.styles';
 import Button from '../../components/Button/Button';
 import PlansDetails from '../../components/PlansDetails/PlansDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faCircleUser, faGlobe, faTableList } from '@fortawesome/free-solid-svg-icons';
 
 const FreePlan: React.FC = () => {
+
+  const plansDetailsRef = useRef<HTMLDivElement>(null);
+  const scrollToPlansDetails = () => {
+    plansDetailsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const about = () => {
     alert('Saber mais');
   };
@@ -33,13 +39,16 @@ const FreePlan: React.FC = () => {
           <FontAwesomeIcon icon={faGlobe} /> Site Personalizado
         </Icon>
       </Icons>
+      <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
 
       <Buttons>
         <Button label="Saber mais" onClick={about} />
         <Button label="✓ Assinar" onClick={sign} />
       </Buttons>
 
-      <PlansDetails />
+      <div ref={plansDetailsRef}>
+        <PlansDetails />
+      </div>
     </Container>
   );
 };

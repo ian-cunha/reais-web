@@ -156,3 +156,33 @@ export const ArrowButton = styled.button`
     display: none;
   }
 `;
+
+export const ButtonDetails = styled.a`
+  color: #e36108;
+  border-radius: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  font-weight: 600;
+  text-align: center;
+
+  &:hover {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const DivBtnDetails = styled.div`
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
