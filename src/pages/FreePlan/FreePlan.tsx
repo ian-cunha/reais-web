@@ -9,6 +9,7 @@ import PopupForm from '../../components/PopupForm/PopupForm';
 const FreePlan: React.FC = () => {
   const plansDetailsRef = useRef<HTMLDivElement>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const scrollToPlansDetails = () => {
     plansDetailsRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -20,6 +21,11 @@ const FreePlan: React.FC = () => {
 
   const Sign = () => {
     window.open('https://app.reaisystems.com.br/SmartImobiliario-Corretor');
+  };
+
+  const openPopupWithPlan = (planId: string) => {
+    setSelectedPlan(planId);
+    setIsPopupOpen(true);
   };
 
   return (
@@ -44,14 +50,14 @@ const FreePlan: React.FC = () => {
       <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
 
       <Buttons>
-        <Button label="Saber mais" onClick={togglePopup} />
+        <Button label="Saber mais" onClick={() => openPopupWithPlan('65085')} />
         <Button label="✓ Assinar" onClick={Sign} />
       </Buttons>
 
       <div ref={plansDetailsRef} />
       <PlansDetails />
 
-      {isPopupOpen && <PopupForm onClose={togglePopup} />}
+      {isPopupOpen && <PopupForm onClose={togglePopup} planId={selectedPlan} />}
     </Container>
   );
 };

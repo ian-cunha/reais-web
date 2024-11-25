@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const About = () => {
-    window.open('https://wa.me/5581973382868?text=Quero%20saber%20mais%20sobre%20o%20plano%20gr%C3%A1tis!', '_blank');
+    window.open('https://wa.me/5581973382868?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20RE.AI.s!', '_blank');
   };
 
   const FreePlan = () => {

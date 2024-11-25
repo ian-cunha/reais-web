@@ -2,8 +2,16 @@ import React, { useRef, useState } from 'react';
 import { Buttons, Container, PlanListWrapper, PlanList, PlanCard, PlanTitle, PlanPrice, PlanFeatures, SubTitle, Title, ArrowButton, ButtonDetails, DivBtnDetails } from './Plans.styles';
 import Button from '../../components/Button/Button';
 import PlansDetails from '../../components/PlansDetails/PlansDetails';
+import PopupForm from '../../components/PopupForm/PopupForm';
 
 const Plans: React.FC = () => {
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
 
   const plansDetailsRef = useRef<HTMLDivElement>(null);
   const scrollToPlansDetails = () => {
@@ -25,6 +33,7 @@ const Plans: React.FC = () => {
   const plans = [
     {
       name: 'Autônomo',
+      id: '65079',
       description: 'Para o corretor autônomo.',
       mensal: 'R$99/mês',
       anual: 'R$79/mês',
@@ -44,6 +53,7 @@ const Plans: React.FC = () => {
     },
     {
       name: 'Micro',
+      id: '65081',
       description: 'Para o corretor que tem um funcionário ou sócio.',
       mensal: 'R$149/mês',
       anual: 'R$119/mês',
@@ -63,6 +73,7 @@ const Plans: React.FC = () => {
     },
     {
       name: 'Pequeno',
+      id: '65082',
       description: 'Ideal para pequenas imobiliárias',
       mensal: 'R$249/mês',
       anual: 'R$199/mês',
@@ -82,6 +93,7 @@ const Plans: React.FC = () => {
     },
     {
       name: 'Médio',
+      id: '65083',
       description: 'Para imobiliárias de médio porte ou grupo de corretores associados.',
       mensal: 'R$349/mês',
       anual: 'R$279/mês',
@@ -101,6 +113,7 @@ const Plans: React.FC = () => {
     },
     {
       name: 'Grande',
+      id: '65084',
       description: 'Para imobiliárias grandes. Consulte o valor para usuários extras.',
       mensal: 'R$449/mês',
       anual: 'R$359/mês',
@@ -120,6 +133,7 @@ const Plans: React.FC = () => {
     },
     {
       name: 'Gratuito',
+      id: '65085',
       description: 'Para quem deseja começar a organizar seu site, cadastro, imóveis e clientes.',
       mensal: 'R$0/mês',
       anual: 'R$0/mês',
@@ -138,8 +152,9 @@ const Plans: React.FC = () => {
     setBillingCycle(cycle);
   };
 
-  const About = () => {
-    window.open('https://wa.me/5581973382868?text=Quero%20saber%20mais%20sobre%20os%20planos.', '_blank');
+  const openPopupWithPlan = (planId: string) => {
+    setSelectedPlan(planId);
+    setIsPopupOpen(true);
   };
 
   return (
@@ -170,7 +185,7 @@ const Plans: React.FC = () => {
                 <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
               </DivBtnDetails>
               <Buttons>
-                <Button label="Saber mais" onClick={About} />
+                <Button label="Saber mais" onClick={() => openPopupWithPlan(plan.id)} />
                 <Button label="✓ Assinar" onClick={() => window.open(plan.sign, '_blank')} />
               </Buttons>
             </PlanCard>
@@ -181,6 +196,8 @@ const Plans: React.FC = () => {
 
       <div ref={plansDetailsRef} />
       <PlansDetails />
+
+      {isPopupOpen && <PopupForm onClose={togglePopup} planId={selectedPlan} />}
     </Container>
   );
 };
