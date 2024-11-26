@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button/Button';
-import { Buttons, Container, Paragraph, SubTitle, Title, Content, Image, BigTitle } from './Home.styles';
+import { Buttons, Container, Paragraph, SubTitle, Title, Content, Image, BigTitle, ArrowDown } from './Home.styles';
 import ai from '../../assets/ai.svg';
 import { useNavigate } from 'react-router-dom';
 import PopupForm from '../../components/PopupForm/PopupForm';
@@ -41,11 +41,11 @@ const Home: React.FC = () => {
 
       {isPopupOpen && <PopupForm onClose={togglePopup} planId={''} />}
 
-      <SubTitle>CONSTRUINDO ABAIXO: </SubTitle>
+      <ArrowDown>↓</ArrowDown>
       <AppSection />
       <IntegrationSection />
-      <MigrationSection />
       <WebsiteSection />
+      <MigrationSection />
     </Container>
   );
 };

@@ -12,12 +12,12 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 0 24px;
+  padding: 24px 24px;
 
   @media (max-width: 768px) {
     flex-direction: column;

@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   height: auto;
   margin: 0;
+  padding-bottom: 24px;
   background-color: black;
 `;
 
@@ -16,6 +17,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 90vh;
   max-width: 1200px;
   padding: 0 24px;
   padding-top: 150px;
@@ -25,6 +27,7 @@ export const Content = styled.div`
     padding-top: 100px;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
   }
 `;
 
@@ -95,4 +98,12 @@ export const Image = styled.img`
     margin-top: 20px;
     max-width: 60%;
   }
+`;
+
+export const ArrowDown = styled.h3`
+  color: white;
+  font-weight: 100;
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: 20px;
 `;

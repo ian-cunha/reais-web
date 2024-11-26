@@ -8,7 +8,7 @@ const MigrationSection: React.FC = () => (
         <Content>
             <Title>Faz Parte de Outro Sistema?</Title>
             <Paragraph>
-                Mude agora mesmo para o Smart com o nosso assistente de importação rápida e prática!
+                Mude agora mesmo para o RE.AI.s com o nosso assistente de importação rápida e prática!
             </Paragraph>
         </Content>
     </Container>
