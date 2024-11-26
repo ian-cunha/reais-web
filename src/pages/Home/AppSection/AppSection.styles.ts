@@ -54,7 +54,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Image = styled.img`
-    width: 700px;
+    width: 52vw;
     @media (max-width: 768px) {
       width: 100%;
   }
@@ -68,7 +68,7 @@ export const Icon = styled.img`
 export const IconStore = styled.img`
     width: 180px;
     margin-bottom: 24px;
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       width: 150px;
   }
 `;

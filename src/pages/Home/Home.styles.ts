@@ -89,7 +89,7 @@ export const Buttons = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 40vw;
+  max-width: 37vw;
   height: auto;
   margin-left: 24px;
 
