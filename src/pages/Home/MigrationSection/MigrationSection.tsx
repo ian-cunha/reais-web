@@ -1,16 +1,23 @@
 import React from 'react';
-import { Container, Title, Paragraph, Image, Content } from './MigrationSection.styles';
-import migrationImage from '../../../assets/ai.svg';
+import {
+    Container,
+    Title,
+    Image,
+    Content,
+    HighlightText,
+    SubTitle
+} from './MigrationSection.styles';
+import migrationImage from '../../../assets/migration/migration.svg';
 
 const MigrationSection: React.FC = () => (
     <Container>
-        <Image src={migrationImage} alt="Migração para o Smart" />
         <Content>
             <Title>Faz Parte de Outro Sistema?</Title>
-            <Paragraph>
-                Mude agora mesmo para o RE.AI.s com o nosso assistente de importação rápida e prática!
-            </Paragraph>
+            <SubTitle>
+                Mude agora mesmo para o <HighlightText>RE.AI.s</HighlightText> com o nosso assistente de importação rápida e prática!
+            </SubTitle>
         </Content>
+        <Image src={migrationImage} alt="Migração para o Smart" />
     </Container>
 );
 

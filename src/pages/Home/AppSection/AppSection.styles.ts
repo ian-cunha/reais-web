@@ -48,8 +48,9 @@ export const SubTitle = styled.h3`
   color: white;
   font-weight: 600;
   @media (max-width: 768px) {
-      font-size: 1.8em;
+      font-size: 1.4em;
       text-align: center;
+      margin-bottom: 15px;
   }
 `;
 

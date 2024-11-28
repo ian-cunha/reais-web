@@ -10,20 +10,20 @@ import {
 } from './IntegrationSection.styles';
 
 // Importação das logos
-import chaveFacilLogo from '../../../assets/integracao/logo-chave.svg';
-import mercadoLivreLogo from '../../../assets/integracao/logo_mercadolivre.svg';
-import ademiLogo from '../../../assets/integracao/logo-ademi.svg';
-import olxLogo from '../../../assets/integracao/logo-olx.svg';
-import vivaRealLogo from '../../../assets/integracao/logo-viva.svg';
-import casaMineiraLogo from '../../../assets/integracao/logo-casamineira.svg';
-import creciLogo from '../../../assets/integracao/logo-creci.svg';
-import dfImoveisLogo from '../../../assets/integracao/logo-df.svg';
-import dreamCasaLogo from '../../../assets/integracao/logo-dreamcasa.svg';
-import imowebLogo from '../../../assets/integracao/logo-imoWeb.svg';
-import lugarCertoLogo from '../../../assets/integracao/logo-lugarcerto.svg';
-import smartXmlLogo from '../../../assets/integracao/logo-smartxml.svg';
-import zapImoveisLogo from '../../../assets/integracao/logo-zap.svg';
-import movingLogo from '../../../assets/integracao/logo-moving.svg';
+import chaveFacilLogo from '../../../assets/integration/logo-chave.svg';
+import mercadoLivreLogo from '../../../assets/integration/logo_mercadolivre.svg';
+import ademiLogo from '../../../assets/integration/logo-ademi.svg';
+import olxLogo from '../../../assets/integration/logo-olx.svg';
+import vivaRealLogo from '../../../assets/integration/logo-viva.svg';
+import casaMineiraLogo from '../../../assets/integration/logo-casamineira.svg';
+import creciLogo from '../../../assets/integration/logo-creci.svg';
+import dfImoveisLogo from '../../../assets/integration/logo-df.svg';
+import dreamCasaLogo from '../../../assets/integration/logo-dreamcasa.svg';
+import imowebLogo from '../../../assets/integration/logo-imoWeb.svg';
+import lugarCertoLogo from '../../../assets/integration/logo-lugarcerto.svg';
+import smartXmlLogo from '../../../assets/integration/logo-smartxml.svg';
+import zapImoveisLogo from '../../../assets/integration/logo-zap.svg';
+import movingLogo from '../../../assets/integration/logo-moving.svg';
 
 // Lista de portais com as logos
 const portals = [
