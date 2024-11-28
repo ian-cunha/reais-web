@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   background-color: black;
   padding: 24px;
-  max-width: 1300px;
+  max-width: 1200px;
 `;
 
 export const Content = styled.div`

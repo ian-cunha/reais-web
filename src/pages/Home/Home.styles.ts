@@ -20,8 +20,6 @@ export const Content = styled.div`
   height: 90vh;
   max-width: 1200px;
   padding: 0 24px;
-  padding-top: 150px;
-  padding-bottom: 100px;
 
   @media (max-width: 768px) {
     padding-top: 100px;
@@ -105,5 +103,4 @@ export const ArrowDown = styled.h3`
   font-weight: 100;
   font-size: 3em;
   margin: 0;
-  margin-bottom: 20px;
 `;
