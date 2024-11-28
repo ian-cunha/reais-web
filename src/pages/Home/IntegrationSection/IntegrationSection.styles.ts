@@ -8,7 +8,7 @@ export const Container = styled.div`
   height: auto;
   margin: 0 auto;
   background-color: black;
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
 
   @media (max-width: 1024px) {
@@ -39,19 +39,21 @@ export const Title = styled.h2`
   font-weight: 600;
   text-align: left;
   @media (max-width: 768px) {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
   }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.6em;
+  font-size: 1.3em;
   color: white;
   font-weight: 100;
   text-align: left;
   @media (max-width: 768px) {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 `;
 

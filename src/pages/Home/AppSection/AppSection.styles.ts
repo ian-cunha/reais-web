@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   height: auto;
   margin: 0;
-  max-width: 1600px;
+  max-width: 1200px;
   width: 100%;
   background-color: black;
   @media (max-width: 768px) {
@@ -44,7 +44,7 @@ export const Title = styled.h2`
 `;
 
 export const SubTitle = styled.h3`
-  font-size: 3em;
+  font-size: 2.3em;
   color: white;
   font-weight: 600;
   @media (max-width: 768px) {
@@ -54,12 +54,14 @@ export const SubTitle = styled.h3`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: white;
   font-weight: 100;
   @media (max-width: 768px) {
-      font-size: 0.8em;
+      font-size: 1em;
       text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
   }
 `;
 
