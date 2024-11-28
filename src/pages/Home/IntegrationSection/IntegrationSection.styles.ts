@@ -2,13 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   background-color: black;
+  max-width: 1600px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
+
 
 export const Content = styled.div`
   display: flex;
@@ -17,7 +25,7 @@ export const Content = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 24px 24px;
+  padding: 24px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -25,15 +33,53 @@ export const Content = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-`;
-
-export const SubTitle = styled.h3`
+export const Title = styled.h2`
+  font-size: 3.3em;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+    text-align: center;
+  }
 `;
 
 export const Paragraph = styled.p`
+  font-size: 1.6em;
+  color: white;
+  font-weight: 100;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+    text-align: center;
+  }
 `;
 
 export const Image = styled.img`
-    width: 50px;
+  width: 200px;
+  margin-top: 24px;
+`;
+
+export const PortalsList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+`;
+
+export const PortalItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  width: 100px;
+  height: 100px;
+`;
+
+export const PortalLogo = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 `;

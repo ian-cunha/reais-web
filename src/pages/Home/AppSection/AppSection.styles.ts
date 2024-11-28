@@ -8,6 +8,8 @@ export const Container = styled.div`
   justify-content: center;
   height: auto;
   margin: 0;
+  max-width: 1600px;
+  width: 100%;
   background-color: black;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -31,17 +33,28 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2.3em;
+  font-size: 1em;
   color: white;
-  font-weight: 400;
+  font-weight: 100;
   @media (max-width: 768px) {
-      font-size: 1.5em;
+      font-size: 1em;
       text-align: center;
+      margin-bottom: 15px;
   }
 `;
 
 export const SubTitle = styled.h3`
-  font-size: 1em;
+  font-size: 3em;
+  color: white;
+  font-weight: 600;
+  @media (max-width: 768px) {
+      font-size: 1.8em;
+      text-align: center;
+  }
+`;
+
+export const Paragraph = styled.p`
+  font-size: 1.5em;
   color: white;
   font-weight: 100;
   @media (max-width: 768px) {
@@ -50,11 +63,8 @@ export const SubTitle = styled.h3`
   }
 `;
 
-export const Paragraph = styled.p`
-`;
-
 export const Image = styled.img`
-    width: 52vw;
+    width: 50%;
     @media (max-width: 768px) {
       width: 100%;
   }
