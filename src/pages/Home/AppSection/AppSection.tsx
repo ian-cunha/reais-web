@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Title, SubTitle, Image, Content, Icon, IconStore, BtnStore, LinkApp, Paragraph } from './AppSection.styles';
-import appImage from '../../../assets/App.svg';
-import icon from '../../../assets/icon.svg';
-import googlePlay from '../../../assets/gPlay.svg';
-import appStore from '../../../assets/appStore.svg';
+import appImage from '../../../assets/app/App.svg';
+import icon from '../../../assets/app/icon.svg';
+import googlePlay from '../../../assets/app/gPlay.svg';
+import appStore from '../../../assets/app/appStore.svg';
 
 const AppSection: React.FC = () => (
   <Container>
