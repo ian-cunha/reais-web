@@ -7,7 +7,9 @@ import {
   PortalsList,
   PortalItem,
   PortalLogo,
+  IntButton,
 } from './IntegrationSection.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Importação das logos
 import chaveFacilLogo from '../../../assets/integration/logo-chave.svg';
@@ -24,6 +26,7 @@ import lugarCertoLogo from '../../../assets/integration/logo-lugarcerto.svg';
 import smartXmlLogo from '../../../assets/integration/logo-smartxml.svg';
 import zapImoveisLogo from '../../../assets/integration/logo-zap.svg';
 import movingLogo from '../../../assets/integration/logo-moving.svg';
+import { faCircleNodes } from '@fortawesome/free-solid-svg-icons/faCircleNodes';
 
 // Lista de portais com as logos
 const portals = [
@@ -46,6 +49,9 @@ const portals = [
 const IntegrationSection: React.FC = () => (
   <Container>
     <Content>
+      <IntButton>
+        <FontAwesomeIcon icon={faCircleNodes} />
+      </IntButton>
       <Title>Integração com os Principais Portais</Title>
       <Paragraph>
         Anuncie seus imóveis e aumente a visibilidade de seu negócio de forma eficiente e profissional!

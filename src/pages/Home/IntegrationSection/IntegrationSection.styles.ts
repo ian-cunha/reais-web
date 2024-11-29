@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -84,4 +84,26 @@ export const PortalLogo = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const IntButton = styled.div`
+  color: #e36108;
+  text-decoration: none;
+  font-size: 7em;
+  display: inline-block;
+  margin-bottom: 10px;
+  animation: ${rotate} 10s linear infinite;
+
+  &:hover {
+    color: white;
+  }
 `;

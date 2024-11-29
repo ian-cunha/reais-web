@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -98,9 +98,31 @@ export const Image = styled.img`
   }
 `;
 
-export const ArrowDown = styled.h3`
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+`;
+
+export const ArrowDown = styled.button`
   color: white;
   font-weight: 100;
   font-size: 3em;
   margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+  animation: ${bounce} 2s infinite;
+
+  &:hover {
+    color: #e36108;
+  }
 `;

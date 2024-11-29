@@ -23,6 +23,19 @@ const Home: React.FC = () => {
     setIsPopupOpen(!isPopupOpen);
   };
 
+  const handleScroll = () => {
+    const nextSection = document.getElementById("next-section");
+    if (nextSection) {
+      const offset = -100;
+      const elementPosition = nextSection.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition + offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+
   return (
     <Container>
       <Content>
@@ -41,7 +54,8 @@ const Home: React.FC = () => {
 
       {isPopupOpen && <PopupForm onClose={togglePopup} planId={''} />}
 
-      <ArrowDown>↓</ArrowDown>
+      <ArrowDown onClick={handleScroll}>↓</ArrowDown>
+      <div id="next-section"></div>
       <AppSection />
       <IntegrationSection />
       <WebsiteSection />
