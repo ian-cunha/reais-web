@@ -9,6 +9,7 @@ import AppSection from './AppSection/AppSection';
 import IntegrationSection from './IntegrationSection/IntegrationSection';
 import WebsiteSection from './WebsiteSection/WebsiteSection';
 import MigrationSection from './MigrationSection/MigrationSection';
+import ClientsSection from './ClientsSection/ClientsSection';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ const Home: React.FC = () => {
       <AppSection />
       <IntegrationSection />
       <WebsiteSection />
+      <ClientsSection />
       <MigrationSection />
     </Container>
   );
