@@ -48,6 +48,8 @@ export const TestimonialCard = styled.div`
   text-align: left;
   transition: transform 0.2s ease;
   border-width: 1px;
+  border-style: dashed;
+  border-color: transparent;
 
   &:hover {
     transform: translateY(-5px);

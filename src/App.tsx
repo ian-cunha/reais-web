@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Plans from './pages/Plans/Plans';
 import FreePlan from './pages/FreePlan/FreePlan';
 import Footer from './components/Footer/Footer';
+import Social from './components/Social/Social';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/planos" element={<Plans />} />
         <Route path="/gratuito" element={<FreePlan />} />
       </Routes>
+      <Social />
       <Footer />
     </Router>
   );

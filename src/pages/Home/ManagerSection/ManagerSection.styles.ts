@@ -57,6 +57,8 @@ export const FeatureCard = styled.div`
   background: #1a1a1a;
   border-radius: 0;
   border-width: 1px;
+  border-style: dashed;
+  border-color: transparent;
   padding: 24px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
