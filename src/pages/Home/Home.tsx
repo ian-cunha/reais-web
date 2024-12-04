@@ -10,6 +10,7 @@ import IntegrationSection from './IntegrationSection/IntegrationSection';
 import WebsiteSection from './WebsiteSection/WebsiteSection';
 import MigrationSection from './MigrationSection/MigrationSection';
 import ClientsSection from './ClientsSection/ClientsSection';
+import ManagerSection from './ManagerSection/ManagerSection';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ const Home: React.FC = () => {
       <ArrowDown onClick={handleScroll}>↓</ArrowDown>
       <div id="next-section"></div>
       <AppSection />
+      <ManagerSection />
       <IntegrationSection />
       <WebsiteSection />
       <ClientsSection />

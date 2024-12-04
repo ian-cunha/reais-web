@@ -38,7 +38,7 @@ const testimonials = [
 
 const ClientsSection: React.FC = () => (
   <Container>
-    <Title>O que nossos clientes dizem</Title>
+    <Title>O que nossos clientes dizem:</Title>
     <TestimonialsGrid>
       {testimonials.map((testimonial, index) => (
         <TestimonialCard key={index}>
