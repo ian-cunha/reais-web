@@ -84,6 +84,12 @@ export const PortalLogo = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    max-width: 140%;
+  }
 `;
 
 const rotate = keyframes`

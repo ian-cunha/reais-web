@@ -87,6 +87,8 @@ export const ClientMessage = styled.p`
   font-size: 1em;
   font-weight: 300;
   line-height: 1.6;
+  font-style: italic;
+  text-align: justify;
 
   @media (max-width: 480px) {
     font-size: 0.9em;
