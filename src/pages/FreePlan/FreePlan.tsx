@@ -50,8 +50,8 @@ const FreePlan: React.FC = () => {
       <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
 
       <Buttons>
-        <Button label="Saber mais" onClick={() => openPopupWithPlan('65085')} />
-        <Button label="✓ Assinar" onClick={Sign} />
+        <Button label="Fale com um consultor" onClick={() => openPopupWithPlan('65085')} />
+        <Button label="✓ Começar agora" onClick={Sign} />
       </Buttons>
 
       <div ref={plansDetailsRef} />

@@ -49,6 +49,20 @@ export const Buttons = styled.div`
   }
 `;
 
+export const ButtonsSubmit = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
 export const PlanTitle = styled.h4`
   font-size: 2em;
   font-weight: 300;

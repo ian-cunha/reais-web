@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 
   return (
     <StyledNavbar>
-      <LogoContainer>
+      <LogoContainer href="/">
         <img src={logo} alt="Logo" />
       </LogoContainer>
       <MenuButton ref={menuButtonRef} onClick={toggleMenu}>

@@ -11,7 +11,7 @@ export const StyledNavbar = styled.nav`
   z-index: 5;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.a`
   img {
     height: 30px;
     margin-top: 5px;

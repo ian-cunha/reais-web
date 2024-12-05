@@ -12,7 +12,7 @@ const AppSection: React.FC = () => (
       <Icon src={icon} alt="Icone do RE.AI.s" />
       <Title>RE.AI.s (Smart Imobiliário)</Title>
       <SubTitle>
-      Aplicativo para Corretores, Imobiliárias e Construtoras
+      Aplicativo para Corretores e Imobiliárias
       </SubTitle>
       <Paragraph>
         Baixe o aplicativo RE.AI.s e tenha todas as informações dos seus imóveis na palma da mão.

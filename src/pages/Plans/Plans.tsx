@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Buttons, Container, PlanListWrapper, PlanList, PlanCard, PlanTitle, PlanPrice, PlanFeatures, SubTitle, Title, ArrowButton, ButtonDetails, DivBtnDetails } from './Plans.styles';
+import { Buttons, Container, PlanListWrapper, PlanList, PlanCard, PlanTitle, PlanPrice, PlanFeatures, SubTitle, Title, ArrowButton, ButtonDetails, DivBtnDetails, ButtonsSubmit } from './Plans.styles';
 import Button from '../../components/Button/Button';
 import PlansDetails from '../../components/PlansDetails/PlansDetails';
 import PopupForm from '../../components/PopupForm/PopupForm';
@@ -184,10 +184,10 @@ const Plans: React.FC = () => {
               <DivBtnDetails>
                 <ButtonDetails onClick={scrollToPlansDetails}>Ver plano detalhado ↓</ButtonDetails>
               </DivBtnDetails>
-              <Buttons>
-                <Button label="Saber mais" onClick={() => openPopupWithPlan(plan.id)} />
+              <ButtonsSubmit>
+                <Button label="Fale com um consultor" onClick={() => openPopupWithPlan(plan.id)} />
                 <Button label="✓ Assinar" onClick={() => window.open(plan.sign, '_blank')} />
-              </Buttons>
+              </ButtonsSubmit>
             </PlanCard>
           ))}
         </PlanList>
