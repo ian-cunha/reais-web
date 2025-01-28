@@ -32,24 +32,19 @@ const Plans: React.FC = () => {
 
   const plans = [
     {
-      name: 'Autônomo',
-      id: '65079',
-      description: 'Para o corretor autônomo.',
-      mensal: 'R$99/mês',
-      anual: 'R$79/mês',
+      name: 'Gratuito',
+      id: '65085',
+      description: 'Para quem deseja começar a organizar seu site, cadastro, imóveis e clientes.',
+      mensal: 'R$0/mês',
+      anual: 'R$0/mês',
       implementation: 'Consulte Implantação',
       features: [
         '1 usuário',
-        '200 imóveis ativos',
+        '50 Imóveis ativos',
         'Cadastro de Clientes',
-        'Integração com Portais',
-        'Site Premium',
-        'CRM Completo',
-        'Atendimento por whatsapp',
-        'Treinamentos das equipes de vendas e gerentes',
-        'Parametrização e configuração da conta',
+        'Site Personalizado',
       ],
-      sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=2',
+      sign: 'https://app.reaisystems.com.br/SmartImobiliario-Corretor',
     },
     {
       name: 'Micro',
@@ -130,21 +125,6 @@ const Plans: React.FC = () => {
         'Parametrização e configuração da conta',
       ],
       sign: 'https://app.reaisystems.com.br/cadastro/planoSmart?indicadorPlano=20',
-    },
-    {
-      name: 'Gratuito',
-      id: '65085',
-      description: 'Para quem deseja começar a organizar seu site, cadastro, imóveis e clientes.',
-      mensal: 'R$0/mês',
-      anual: 'R$0/mês',
-      implementation: 'Consulte Implantação',
-      features: [
-        '1 usuário',
-        '50 Imóveis ativos',
-        'Cadastro de Clientes',
-        'Site Personalizado',
-      ],
-      sign: 'https://app.reaisystems.com.br/SmartImobiliario-Corretor',
     },
   ];
 
